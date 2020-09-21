@@ -1,8 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import BatteryBuddyApp from "App";
 import * as serviceWorker from "serviceWorker";
+import ThemeService from "services/ThemeService";
+import BatteryBuddyApp from "App";
 
-ReactDOM.render(<BatteryBuddyApp />, document.getElementById("root"));
+ReactDOM.render(
+  <ThemeService>
+    <BatteryBuddyApp />
+  </ThemeService>,
+  document.getElementById("root")
+);
 
 serviceWorker.unregister();
